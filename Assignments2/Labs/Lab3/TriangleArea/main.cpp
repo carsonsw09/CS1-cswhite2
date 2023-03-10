@@ -21,7 +21,7 @@ using namespace std;
 
 // Function prototypes
 // Function finds the answer from given string and restuns the result as a string
-float areaOfTriangle(unsigned int height, unsigned int base);
+float areaOfTriangle( float height, float base);
 // function to test area function
 void testArea();
 void testArea2();
@@ -33,13 +33,15 @@ int main()
 {
   // call testArea function
   testArea();
-  unsigned height, base;
+  int  height, base;
   float answer;
   // read height and base into corresponding variables
   cin >> height >> base;
+
 	// FIXME1: Call area function passing proper arguments
 	// store the returned result into answer variable
-	answer = 0;
+	answer = areaOfTriangle(height, base);
+
 	// print answer
 	printf("%.7f\n", answer);
 	return 0;
@@ -57,7 +59,7 @@ float areaOfTriangle(float height, float base) {
 
 // function to test area function
 void testArea() {
-  unsigned int height, base;
+   int height, base;
   float answer, expected;
   height = 10;
   base = 5;
@@ -65,7 +67,7 @@ void testArea() {
   expected = 25.0;
   assert(abs(answer-expected) < MAX_ERROR);}
 void testArea2(){
-  unsigned int height, base;
+   int height, base;
   float answer, expected;
   height = 1;
   base = 1;
@@ -81,7 +83,7 @@ void testArea2(){
   
   // FIXME3: Write 2nd test case//fixed
   void testArea3(){
-  unsigned int height, base;
+   int height, base;
   float answer, expected;
   height = 2;
   base = 2;
@@ -90,7 +92,7 @@ void testArea2(){
   assert(abs(answer-expected) < MAX_ERROR);}
   // FIXME4: Write 3rd test case//fixed
   void testArea4(){
-  unsigned int height, base;
+   int height, base;
   float answer, expected;
   height = 10;
   base = 10;
