@@ -21,7 +21,7 @@ using namespace std;
 
 // Function prototypes
 // Function finds the answer from given string and restuns the result as a string
-float areaOfTriangle( float height, float base);
+float areaOfTriangle( int height, int base);
 // function to test area function
 void testArea();
 void testArea2();
@@ -48,8 +48,8 @@ int main()
 }
 
 // Function implementation
-float areaOfTriangle(float height, float base) {
-  float area = 0;
+float areaOfTriangle(int height, int base) {
+ float area= 0;
   area = (base * height) / 2.0;
     return area;
   // FIXME2: Find the area of traingle using the formular given in algorithm step: 2.a//fixed
@@ -98,6 +98,7 @@ void testArea2(){
   base = 10;
   answer = areaOfTriangle(height, base);
   expected = 50;
+
   assert(abs(answer-expected) < MAX_ERROR);}
   // FIXME5: Write 4th test case//fixed
  

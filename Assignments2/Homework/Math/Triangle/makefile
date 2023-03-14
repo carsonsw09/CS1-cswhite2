@@ -4,10 +4,10 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 
-PROGRAM = library.exe
+PROGRAM = Triangle.exe
 
 
-CPPFILES = library.cpp
+CPPFILES = main.cpp
 
 
 all:

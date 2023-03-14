@@ -4,10 +4,10 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 
-PROGRAM = Points.exe
+PROGRAM = .exe
 
 
-CPPFILES = main.cpp
+CPPFILES = .cpp
 
 
 all:
@@ -16,9 +16,13 @@ all:
 
 run:
 	./$(PROGRAM)
+
+
 clean:
 	rm -f $(PROGRAM) *.o
 test:
 	cat 1.in | ./$(PROGRAM) | diff - 1.ans
 	cat 2.in | ./$(PROGRAM) | diff - 2.ans
 	cat 3.in | ./$(PROGRAM) | diff - 3.ans
+	cat 4.in | ./$(PROGRAM) | diff - 4.ans
+

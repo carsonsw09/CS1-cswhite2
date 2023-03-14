@@ -36,8 +36,7 @@ return distance;
 
 // test function that runs automated testing
 void unitTest();
-void unitTest2();
-void unitTest3();
+
 
 // function clears the screen system call
 // NOTE: system call is not a security best pracice!
@@ -69,12 +68,17 @@ int main()
         cin >> ch >> x2 >> ch >> y2 >> ch;
         printf("(x2, y2) = (%d, %d)\n", x2, y2);
         //FIXME3 - Read/parse the second point and store data into variables x2 and y2//fixed
-        double distance = findDistance(x1, y1, x2, y2);
-        //FIXME4 - Call unitTest function//fixed
-        cout << "The distance between (" << x1 << ", " << y1 << ") and (" << x2 << ", " << y2 << ") is "
-             << distance << endl;
 
-        //FIXME5 - call findDistance function passing proper arguments//?
+        
+        //FIXME4 - Call unitTest function//fixed
+        
+       
+        double distance = findDistance(x1, y1, x2, y2);
+        printf("The distance between (%d, %d) and (%d, %d) is %f\n", x1, y1, x2, y2, distance );
+
+       unitTest();
+
+        //FIXME5 - call findDistance function passing proper arguments//fixed?
         //FIXME6 – Using printf function display the returned distance with proper description//fixed
     }
 
@@ -87,34 +91,33 @@ int main()
 
 double findDistance2(int x1, int y1, int x2, int y2)
 {
-    // FIXME7 - Find the distance between (x1, y1) and (x2, y2)
+    // FIXME7 - Find the distance between (x1, y1) and (x2, y2)//fixed
     // following the algorithm in step 1
     // return the calculated distance
-    return 0.000000;
+    
+   
+double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+return distance;
+    
 }
 
 // test function that test findDistance function with 3 test cases
 void unitTest()
 {
     float result =  findDistance(4, 3, 5, 1);
-    float expected = 2.236067f;
+    float expected = 2.236068f;
     assert( fabs(result - expected) <= epsilon); //accept the result if it's less than the error of margin
-    // FIXME8 - add at least two more test cases
-    cout << "all test cases passed..." << endl;
-}
-void unitTest2()
-{
-    float result =  findDistance(1, 1, 2, 2);
-    float expected = 1.4142f;
-    assert( fabs(result - expected) <= epsilon); //accept the result if it's less than the error of margin
-    
-    cout << "all test cases passed..." << endl;
-}
-void unitTest3()
-{
-    float result =  findDistance(3, 3, 0, 0);
-    float expected = 4.24264f;
-    assert( fabs(result - expected) <= epsilon); //accept the result if it's less than the error of margin
-    
+
+     result =  findDistance(1, 1, 2, 2);
+     expected = 1.4142f;
+    assert( fabs(result - expected) <= epsilon);
+
+     result =  findDistance(3, 3, 0, 0);
+     expected = 4.24264f;
+    assert( fabs(result - expected) <= epsilon);
+
+
+
+    // FIXME8 - add at least two more test cases//fixed
     cout << "all test cases passed..." << endl;
 }
