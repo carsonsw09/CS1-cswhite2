@@ -1,8 +1,8 @@
 #include <iostream> 
 
-using namesapce std; 
+using namespace std; 
 
-Int main(){ 
+int main(){ 
 
 int r1, s, r2; 
 
