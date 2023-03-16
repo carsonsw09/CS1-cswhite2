@@ -32,11 +32,11 @@ void testanswer();
 int main(int argc, char* argv[]) {
   if (argc == 2 and string(argv[1]) == string("test")) {
     testOddOrEven();
-    int num1;
     string answer;
 
     // FIXME1: call testOddOrEven function that unit tests oddOrEven function//fixed
     testanswer();
+    
     // FIXME2: call the test function that unit tests answer function//fixed
   }
   else {

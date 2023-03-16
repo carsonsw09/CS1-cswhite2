@@ -145,7 +145,7 @@ double findQuotient( double n1,  double n2) {
 
 // functions to run automated testing for various user-defined functions
 void test() {
-    assert(findsum(10, 5) == 15);
+    assert(findSum(10, 5) == 15);
     assert(findSum(-5, 10.5) == 5.5); // test case 2
 
     assert(findDifference(10, 5) == 5);
