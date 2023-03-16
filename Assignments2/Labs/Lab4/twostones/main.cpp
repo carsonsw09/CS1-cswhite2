@@ -25,23 +25,26 @@ string oddOrEven( int num1);
 // function to test oddOrEven function
 void testOddOrEven();
 // given a positive integer, function returns the answer as expected by Kattis
-string answer(int num1);
+string answer( const unsigned int num1);
 
 void testanswer();
 
 int main(int argc, char* argv[]) {
+  int stones;
+
   if (argc == 2 and string(argv[1]) == string("test")) {
     testOddOrEven();
-    string answer;
+    answer(stones);
 
     // FIXME1: call testOddOrEven function that unit tests oddOrEven function//fixed
-    testanswer();
+   testanswer();
     
     // FIXME2: call the test function that unit tests answer function//fixed
   }
   else {
     unsigned int stones=0;//fix this part
-    // FIXME3: readin the stones
+    // FIXME3: readin the stones//fixed
+     cin >> stones;
     cout << answer(stones) << endl;
   }
   return 0;
@@ -60,7 +63,7 @@ return 0;
   
 }
 
-string answer(const int unsigned stone) {
+string answer(const unsigned int stone) {
   string evenorodd = oddOrEven(stone);
   if (evenorodd == "odd") return "Alice";
   else return "Bob";
@@ -74,7 +77,7 @@ void testOddOrEven() {
   // FIXME6: Write 3rd test case//fixed
   
   assert(oddOrEven(3) == "odd");
-  cerr << "All test cases passed for oddOrEven() !\n";
+  cout << "All test cases passed for oddOrEven() !\n";
 }
 
 void testanswer(){
