@@ -22,7 +22,7 @@ void printMenu(void);
  
 // function prompts user to enter two numbers
 // the numbers are stored in the parameters provided
-void getTwoNumbers(double n1, double n2);
+void getTwoNumbers(double &n1, double& n2);
  
 // function takes two numbers; finds and returns the sum of the two
 double findSum(double n1, double n2);
@@ -96,13 +96,15 @@ void printMenu(void) {
     cout << "Enter one of the menu options [1-8]: ";
 }
 
-void getTwoNumbers(double n1, double n2) {
+void getTwoNumbers(double &n1, double &n2) {
     cout << "Enter two numbers separated by a space: ";
     cin >> n1 >> n2;
 }
 
 double findSum( double n1,  double n2) {
-    return (n1 + n2);
+    double sum = 0;
+     sum += (n1+n2);
+    return sum;
 }
 
 double findDifference( double n1,  double n2) {
@@ -133,7 +135,7 @@ double findLarger( double n1,  double n2) {
 }
 
 double findSmaller( double n1, const double n2) {
-    //FIXME7 - find the smaller of n1 and n2 and return it//maybe fixed check this one out
+    //FIXME7 - find the smaller of n1 and n2 and return it//fixed
     double smaller = (n1 <= n2) ? n1 : n2;
     return smaller;
 }
@@ -163,11 +165,13 @@ void test() {
     assert(findQuotient(10, 5) == 2);
     assert(findQuotient(20, 2) == 10);
 
-    double answer = findAverage(10, 5);
+    double answer; 
+     findAverage(10, 5, answer);
     double expected = 7.5;
     assert(answer == expected);
-    double answer = findAverage(20, 2);
-    double expected = 11;
+
+     findAverage(20, 2, answer);
+     expected = 11;
     assert(answer == expected);//used the test case 1 in for this test
 
     // FIXME9 – Using assert function write at least 2 test cases for each of the following functions//fixed
@@ -180,7 +184,8 @@ void test() {
 // the program is menu driven
 bool program() {
     int option = 1; // variable to store user entered option
-    double num1=0, num2=0; // variables to store two numbers entered by user
+    double n1=0, n2=0;
+     // variables to store two numbers entered by user
     // display menu options
     printMenu();
     // Input validation
@@ -201,62 +206,63 @@ bool program() {
         case 1:
         {
             // get two numbers and store them into num1 and num2 using function
-            getTwoNumbers(num1, num2);
+            getTwoNumbers(n1, n2);
             // call findSum function; store the returned value in sum variable
-            double sum = findSum(num1, num2);
+            double sum = findSum(n1, n2);
             // display the result with proper description
-            printf("%.2f + %.2f = %.2f\n", num1, num2, sum);
+            printf("%.2f + %.2f = %.2f\n", n1, n2, sum);
             break;
         }
         case 2:
         {
-            getTwoNumbers(num1, num2);
+            getTwoNumbers(n1, n2);
             //FIXME10: call getTwoNumbers function//fixed
-            double difference = findDifference(num1, num2);
-            printf("%.2f + %.2f = %.2f\n", num1, num2, difference);
+            double difference = findDifference(n1, n2);
+            printf("%.2f + %.2f = %.2f\n", n1, n2, difference);
             //FIXME11: call findDifference function and print the result//fixed
             break;
         }
         case 3:
         {
-            getTwoNumbers(num1, num2);
-            double product = findProduct(num1, num2);
-            printf("%.2f + %.2f = %.2f\n", num1, num2, product);
+            getTwoNumbers(n1, n2);
+            double product = findProduct(n1, n2);
+            printf("%.2f + %.2f = %.2f\n", n1, n2, product);
             //FIXME12: get two numbers and find their product using functions//fixed
             break;
         }
         case 4:
         {
-            getTwoNumbers(num1, num2);
-            double smaller = findSmaller(num1, num2);
-            printf("%.2f + %.2f = %.2f\n", num1, num2, smaller);
+            getTwoNumbers(n1, n2);
+            double smaller = findSmaller(n1, n2);
+            printf("%.2f + %.2f = %.2f\n", n1, n2, smaller);
             break;
 
         }
         case 6:
         {   
-            getTwoNumbers(num1, num2);
-            double quotient = findQuotient(num1, num2);
-            printf("%.2f + %.2f = %.2f\n", num1, num2, quotient);
+            getTwoNumbers(n1, n2);
+            double quotient = findQuotient(n1, n2);
+            printf("%.2f + %.2f = %.2f\n", n1, n2, quotient);
             break;
 
 
         }
         case 7:
-            getTwoNumbers(num1, num2);
-            double average = findAverage(num1, num2);
-            printf("%.2f + %.2f = %.2f\n", num1, num2, average);
+            getTwoNumbers(n1, n2);
+            double average;
+             findAverage(n1, n2, average);
+            printf("%.2f + %.2f = %.2f\n", n1, n2, average);
             break;
 
         // FIXME13: complete the rest of the cases 4, 6, and 7//fixed
         case 5:
         {
             // get two numbers
-            getTwoNumbers(num1, num2);
+            getTwoNumbers(n1, n2);
             // find the larger of the two numbers
-            double larger = findLarger(num1, num2);
+            double larger = findLarger(n1, n2);
             // print the result
-            printf("larger between %.2f & %.2f is %.2f\n", num1, num2, max);
+            printf("larger between %.2f & %.2f is %.2f\n", n1, n2, larger);
             break;
         }
         case 8:
