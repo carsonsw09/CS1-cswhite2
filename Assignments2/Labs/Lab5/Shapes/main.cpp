@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <string>
 
+
 using namespace std;
 
 
@@ -29,7 +30,10 @@ void printTriangle(int height) {
 
 void printFlippedTriangle(int height) {
 
-    int row
+    int row = 1;
+
+ 
+}
     /* 
     Implement the function that takes height as an argument
     and prints a triangle with * of given height.
@@ -42,7 +46,7 @@ void printFlippedTriangle(int height) {
     
     */
     // FIXME3 ...
-}
+
 
 
 /*  
@@ -57,6 +61,14 @@ Square of height 5, e.g., would look like the following.
 *  *  *  *  *   
 */
 
+void printSquare(int height) {
+    for (int i = 0; i < height; i++) {
+        for (int col = 0; col < height; col++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
 // function clears the screen system call
 // NOTE: system call is not a security best pracice!
 void clearScreen() {
@@ -69,8 +81,33 @@ void clearScreen() {
 }
 
 int main(int argc, char* argv[]) {
-    // FIXME5 add a loop to make the program to continue to run until the user wants to quit
-    // FIXME6 call clearScreen function to clear the screen for each round of the loop
+    char answer;
+    f(argc == 2 && string(argv[1]) == "test") {
+        test();
+        exit(EXIT_SUCCESS); 
+    }
+    else {
+        
+        while (true) {
+            if (!program()) 
+                break; 
+            cin.ignore(100, '\n');
+            cout << "Enter to continue...";
+            cin.get();
+            clearScreen();
+        }
+    }
+    cin.ignore(100, '\n');
+    cout << "Enter to quit the program.\n";
+    cout << "Good bye..." << endl;
+    cin.get();
+    return 0;
+
+
+    // FIXME5 add a loop to make the program to continue to run until the user wants to quit//fixed
+
+    clearScreen();
+    // FIXME6 call clearScreen function to clear the screen for each round of the loop//fixed
     int height;
     cout << "Program prints geometric shapes of given height with *\n";
     cout << "Please enter the height of the shape: ";
@@ -79,18 +116,31 @@ int main(int argc, char* argv[]) {
     printTriangle(height);
 
     // FIXME7
+    printFlippedTriangle(height);
     // Call printFlippedTriangle passing proper argument
     // Manually test the function
 
     // FIXME6
     // Call the function defined in FIXME4 passing proper argument
     // Manually test the function
+    printSquare(height);
 
-    // FIXME9
-    // prompt user to enter y/Y to continue anything else to quit
+    // FIXME9//fixed
+    // prompt user to enter y/n to continue anything else to quit
+    cout << "Enter y to continue or n to quit";
+    cin >> answer;
+    if (response == 'y' || response == 'Y') {
+        cout << "Continuing..." << endl;
+        // add code here for what to do when user continues
+    } else {
+        cout << "Quitting..." << endl;
+        
+        return 0;
+    }
+    
+}
 
-    // FIXME10
+    // FIXME10//fixed
     // Use conditional statements to break the loop or continue the loop
 
-    return 0;
-}
+   

@@ -28,7 +28,7 @@ using namespace std;
 
 // Function prototypes
 // Function finds the the Euclidean distance given two points (x1, y1) and (x2, y2)
-float finddistance( float x1,  float y1,  float x2,  float y2);
+float distance( float x1,  float y1,  float x2,  float y2);
 
 
 
@@ -42,25 +42,28 @@ int main(int argc, char* argv[]) {
   if (argc == 2 and string(argv[1]) == string("test")) {
     // FIXME1: call testDistance function//fixed
     testDistance();
+   
   }
   else {
-    float gopherX, gopherY;
+    float gopherX, gopherY, answer2;
     float x, y; // varibles to read gopher hole coordinates
     string answer = "The gopher cannot escape.";
     float gopher_dist, dog_dist=0;
     // read gopher's coordinates
+    cout << "Enter the coordinates for the gopher";
     cin >> gopherX >> gopherY;
     float dogX, dogY;
-    float x, y;
-    float dog_dist, gopher_dist=0;
+    gopher_dist=0;
+    cout << "Enter the coordinates for the dog";
+    cin >> dogX >> dogY;
     // FIXME2: read dog's coordinates//?Fixed?
     while (cin >> x >> y) { // while there's hole coordinates to read
       //find gopher's distance from (x, y)
       gopher_dist = distance(gopherX, gopherY, x, y);
-      return answer;
+      return answer2;
       // store the returned result into answer variable
       dog_dist = distance(dogX, dogY, x, y);
-      return answer;
+      return answer2;
       // FIXME3: find dog's distance from (x, y)//fixed
       if (dog_dist >= 2*gopher_dist) {
         ostringstream oss;
@@ -70,15 +73,15 @@ int main(int argc, char* argv[]) {
         break; // no need to test more holes; the first one will do!
       }
     }
-    cout << answer << endl;
+    cout << answer << answer2 << endl;
   }
 	return 0;
 }
 
 // Function implementation
-float distance( float x1,  float y1,  float x2,   y2) {
-  float d = 0;
-  float distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+float distance( float x1,  float y1,  float x2,  float y2) {
+
+  float d = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 
   // FIXME4: Find the Eucledian distance between two points on 2-d coordiantes.//fixed
   // store the distance into the `d` variable
@@ -87,29 +90,49 @@ float distance( float x1,  float y1,  float x2,   y2) {
 
 // function to test area function
 void testDistance() {
-  float x1, y1, x2, y2, answer, expected;
+  float x1, y1, x2, y2, answer2, expected;
   x1 = 1.000f;
   y1 = 1.000f;
   x2 = 2.000f;
   y2 = 2.000f;
-  answer = distance(x1, y1, x2, y2);
+  answer2 = distance(x1, y1, x2, y2);
   expected = 1.4142135623731;
   cout << fixed << showpoint << setprecision(3) << endl;
-  cout << answer << " " << expected << endl;
-  assert(abs(answer-expected) < TOLERANCE);
+  cout << answer2 << " " << expected << endl;
+  assert(abs(answer2-expected) < TOLERANCE);
 
   x1 = 2.000f;
   y1 = 2.000f;
   x2 = 4.000f;
   y2 = 4.000f;
-  answer = distance(x1, y1, x2, y2);
+  answer2 = distance(x1, y1, x2, y2);
   expected = 2.828427124;
   cout << fixed << showpoint << setprecision(3) << endl;
-  cout << answer << " " << expected << endl;
+  cout << answer2 << " " << expected << endl;
+
+   x1 = 5.000f;
+  y1 = 3.000f;
+  x2 = 2.000f;
+  y2 = 4.000f;
+  answer2 = distance(x1, y1, x2, y2);
+  expected = 3.1622776601;
+  cout << fixed << showpoint << setprecision(3) << endl;
+  cout << answer2 << " " << expected << endl;
+
+   x1 = 10.000f;
+  y1 = 10.000f;
+  x2 = 0.000f;
+  y2 = 0.000f;
+  answer2 = distance(x1, y1, x2, y2);
+  expected = 2.828427124;
+  cout << fixed << showpoint << setprecision(3) << endl;
+  cout << answer2 << " " << expected << endl;
+
+
 
   
   // FIXME5: Write 2nd test case for distance function//fixed
-  // FIXME6: Write 3rd test case for distance function
-  // FIXME7: Write 4th test case for distance function
+  // FIXME6: Write 3rd test case for distance function//fixed
+  // FIXME7: Write 4th test case for distance function//fixed
   cerr << "All test cases passed!\n";
 }
