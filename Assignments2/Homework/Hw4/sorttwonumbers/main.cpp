@@ -41,7 +41,7 @@ void testSortNumbers() { //this is where all the test cases are done
  
 int main() { 
   int num1, num2; 
-  cout << "Enter two whole numbers: "; 
+  cout << "Enter two whole numbers: ";
   cin >> num1 >> num2; 
    
   sortNumbers(num1, num2); 
