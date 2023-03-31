@@ -45,25 +45,25 @@ int main(int argc, char* argv[]) {
    
   }
   else {
-    float gopherX, gopherY, answer2;
+    float gopherX, gopherY;
     float x, y; // varibles to read gopher hole coordinates
     string answer = "The gopher cannot escape.";
     float gopher_dist, dog_dist=0;
     // read gopher's coordinates
-    cout << "Enter the coordinates for the gopher";
+    cout << "Enter the coordinates for the gopher ";
     cin >> gopherX >> gopherY;
     float dogX, dogY;
     gopher_dist=0;
-    cout << "Enter the coordinates for the dog";
-    cin >> dogX >> dogY;
-    // FIXME2: read dog's coordinates//?Fixed?
+    cout << "Enter the coordinates for the dog ";
+    cin >> dogX;
+    cin >> dogY;
+    // FIXME2: read dog's coordinates//Fixed
+    cout << "Please enter the coordinates for the hole ">> endl;
     while (cin >> x >> y) { // while there's hole coordinates to read
       //find gopher's distance from (x, y)
       gopher_dist = distance(gopherX, gopherY, x, y);
-      return answer2;
       // store the returned result into answer variable
       dog_dist = distance(dogX, dogY, x, y);
-      return answer2;
       // FIXME3: find dog's distance from (x, y)//fixed
       if (dog_dist >= 2*gopher_dist) {
         ostringstream oss;
@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
         break; // no need to test more holes; the first one will do!
       }
     }
-    cout << answer << answer2 << endl;
+    cout << answer << endl;
   }
 	return 0;
 }
@@ -119,7 +119,7 @@ void testDistance() {
   cout << fixed << showpoint << setprecision(3) << endl;
   cout << answer2 << " " << expected << endl;
 
-   x1 = 10.000f;
+  x1 = 10.000f;
   y1 = 10.000f;
   x2 = 0.000f;
   y2 = 0.000f;

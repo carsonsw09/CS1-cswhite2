@@ -32,6 +32,14 @@ void printFlippedTriangle(int height) {
 
     int row = 1;
 
+    while (height >= row) {
+        // column
+        for(int col = 1; col <=height; col++)
+            cout << "* ";
+        height --;
+        cout << endl;
+    }
+
  
 }
     /* 
@@ -45,12 +53,12 @@ void printFlippedTriangle(int height) {
     *
     
     */
-    // FIXME3 ...
+    // FIXME3 ...//fixed
 
 
 
 /*  
-FIXME4
+FIXME4// fixed
 Design and implement a function that takes an integer as height and
 prints square of the given height with *.
 Square of height 5, e.g., would look like the following.
@@ -64,7 +72,7 @@ Square of height 5, e.g., would look like the following.
 void printSquare(int height) {
     for (int i = 0; i < height; i++) {
         for (int col = 0; col < height; col++) {
-            cout << "*";
+            cout << "* ";
         }
         cout << endl;
     }
@@ -78,35 +86,28 @@ void clearScreen() {
     #else
         system("clear");
     #endif
-}
+
 
 int main(int argc, char* argv[]) {
-    char answer;
-    f(argc == 2 && string(argv[1]) == "test") {
-        test();
-        exit(EXIT_SUCCESS); 
-    }
-    else {
         
-        while (true) {
-            if (!program()) 
-                break; 
-            cin.ignore(100, '\n');
-            cout << "Enter to continue...";
-            cin.get();
-            clearScreen();
-        }
-    }
-    cin.ignore(100, '\n');
-    cout << "Enter to quit the program.\n";
-    cout << "Good bye..." << endl;
-    cin.get();
-    return 0;
+    char userinpunt = 'b';
+    bool keeprunning = true;
+        while(keeprunning){
+            
+
+
+
+
+
+
+
+
+
+        
 
 
     // FIXME5 add a loop to make the program to continue to run until the user wants to quit//fixed
 
-    clearScreen();
     // FIXME6 call clearScreen function to clear the screen for each round of the loop//fixed
     int height;
     cout << "Program prints geometric shapes of given height with *\n";
@@ -124,19 +125,18 @@ int main(int argc, char* argv[]) {
     // Call the function defined in FIXME4 passing proper argument
     // Manually test the function
     printSquare(height);
+    cout << "If you want to keep playing enter y, if you want to quit enter n ";
+        cin >> userinpunt;
+    if(userinpunt == 'n')
+    keeprunning = false;
+    clearScreen();
+    
+
+        }
 
     // FIXME9//fixed
     // prompt user to enter y/n to continue anything else to quit
-    cout << "Enter y to continue or n to quit";
-    cin >> answer;
-    if (response == 'y' || response == 'Y') {
-        cout << "Continuing..." << endl;
-        // add code here for what to do when user continues
-    } else {
-        cout << "Quitting..." << endl;
-        
-        return 0;
-    }
+  
     
 }
 
