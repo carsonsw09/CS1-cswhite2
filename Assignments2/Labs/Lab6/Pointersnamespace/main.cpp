@@ -42,22 +42,30 @@ OPERATION getOperation(char);
 void unittest();
 
 int main(int argc, char* argv[]) {
-    // FIXME1 - Call unittest function if "test" argument is passed to main
+    // FIXME1 - Call unittest function if "test" argument is passed to main//fixed
     // exit the program after calling unittest
-
-    char input;
+    if (argc > 1 && std::strcmp(argv[1], "test") == 0) {
+    unittest();
+    return 0;
+  }
+    char userinpunt = 'b';
+    bool keeprunning = true;
+        while(keeprunning){
     big_int *num1; //a pointer variable to point to big_int data
     num1 = new big_int; //allocate memory in heap and store the address in num1
     big_int *num2 = new big_int; //declare num2 as a dynamic variable
     large_int *sum = new large_int; //declare sum as a dynamic variable
     large_int *prod = new large_int;
-    // FIXME2 - declare dynamic variables to store difference and larger values
+    large_int *diff = new large_int;
+    large_int *larg = new large_int;
+    // FIXME2 - declare dynamic variables to store difference and larger values//fixed
     // Must use these variables to store the returned values from functions
 
     OPERATION oper;
     
-    //FIXME3: Add do... while loop to continue the program until the user wants to quit
-    //FIXME4: call clear function defined above to clear the screen
+    //FIXME3: Add do... while loop to continue the program until the user wants to quit//fixed
+    //FIXME4: call clear function defined above to clear the screen//fixed
+   
     showMenu();
     cin >> input;
     oper = getOperation(input);
@@ -70,7 +78,21 @@ int main(int argc, char* argv[]) {
             *sum = MyFunctions::findSum(num1, num2);
             printf("%lld + %lld = %lld\n", *num1, *num2, *sum);
             break;
-            // FIXME5: complete the rest of the cases to perform other operations
+            // FIXME5: complete the rest of the cases to perform other operations//one test case fixed need to fix one more
+        case SUBTRACT:
+            cout << "Enter two whole numbers separated by space: ";
+            cin >> *num1 >> *num2;
+            *diff = MyFunctions::findDifference(num1, num2);
+            printf("%lld - %lld = %lld\n", *num1, *num2, *diff);
+            break;
+        case LARGER://fix this test case
+            cout << "Enter two whole numbers separated by space: ";
+            cin >> *num1 >> *num2;
+            *larg = MyFunctions::findLarger(num1, num2);
+            *larg =  (n1 >= n2) ? n1 : n2;
+            cout << *larg;
+            break;
+
         case MULTIPLY:
             cout << "Enter two whole numbers separated by space: ";
             // store the data by dereferencing pointers
@@ -87,10 +109,14 @@ int main(int argc, char* argv[]) {
     delete num2;
     delete sum;
     delete prod;
-    cin.ignore(1000, '\n');
-    cout << "Good bye! Enter to exit the program...";
-    cin.get();
-    return 0;
+    delete diff;
+    delete larg;
+    cout << "If you want to keep playing enter y, if you want to quit enter n ";
+        cin >> userinpunt;
+    if(userinpunt == 'n')
+    keeprunning = false;
+     clear();
+}
 }
 
 // Menu options
@@ -112,13 +138,16 @@ OPERATION getOperation(char choice) {
         case '1':
             op = ADD;
             break;
-        case '2':
+        case '4':
             op = MULTIPLY;
             break;
-        case '3':
+        case '2':
             op = SUBTRACT;
             break;
-        // FIXME6 - add case for LARGER
+        case '3' :
+            op = LARGER;
+            break;
+        // FIXME6 - add case for LARGER//fixed
         default:
             op = QUIT;
     }
