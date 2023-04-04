@@ -8,17 +8,14 @@ Mav Username	cswhite2
 GitHub Username	carsonsw09
 Repository	https://github.com/carsonsw09/CS1-cswhite2
 
-Assignments:
+# Homework
 
-**Homework**
-
-**Homework 2:**
+## Homework 2
 Name	R2
 Description This finds the remaining number based off the sum and another side
 Due Date	2/24/23
 Status	Done
-Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Math/R2
-Self Grade	90/100
+Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Math/R|Self Grade	90/100
 Notes	Everuthing is in there from the program to the input and output files as while as screenshots of kattis and the program running. 
 
 Name	Triangle
@@ -29,7 +26,7 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homew
 Self Grade	100/100
 Notes	This program runs perfectly well and a screenshot of the program is included running is included. 
 
-**Homework 3:**
+## Homework 3:
 
 Name	Calculator
 Description This run a calculator like program based off of two numbers that user inputs as it runs a bunch of different functions related to those two numbers
@@ -47,7 +44,7 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homew
 Self Grade	100/100
 Notes	The program runs perfectly and both the screenshots are in the folder. 
 **
-**Homework 4:****
+## Homework 4:
 
 Name	Menu 
 Description This programs runs functions based off of 5 numbers and then runs a test case
@@ -65,7 +62,7 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homew
 Self Grade	100/100
 Notes	This program runs really well and all the screenshorts are in there. 
 
-**Homework 5**
+## Homework 5
 
 Name	Guess Number
 Description This program generates a random number and then plays a game with the user as they try to guess the number
@@ -83,7 +80,7 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homew
 Self Grade	
 Notes	Just need to figure out how to do the test cases
 
-**Homework 6:**
+## Homework 6:
 
 Name	Line Them Up
 Description This program asks the user how many people are on the team and to enter their names and then returns wheather the names are in increasing
@@ -102,9 +99,9 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homew
 Self Grade	
 Notes	I need to understand the kattis problem first
 
-**Labs**
+# Labs
 
-**Lab2:**
+## Lab2:
 
 Name	Last Problem
 Description Lab based on functions
@@ -122,7 +119,7 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/
 Self Grade	90/100
 Notes	I couldn't figure out the radian fix me's
 
-**Lab3:**
+## Lab3:
 
 Name	Points
 Description Lab based on unit testing
@@ -140,7 +137,7 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/
 Self Grade	100/100
 Notes	All the fix me's are fixed
 
-**Lab4:**
+## Lab4:
 
 Name	Menu
 Description Lab based on conditionals
@@ -158,7 +155,7 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/
 Self Grade	100/100
 Notes	All the fix me's are completed
 
-****Lab5:
+## Lab5:
 
 Name	Dog and Gopher
 Description  Lab based on loops
@@ -176,7 +173,7 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/
 Self Grade	
 Notes	I need to figure out test cases for this one
 
-**Lab 6:**
+## Lab 6:
 
 Name	Pointersnamespace
 Description Lab based on pointers
