@@ -75,10 +75,10 @@ Notes	This program meets all the requirements and the screenshot is in the folde
 Name	Fizzbuzz
 Description This program returns Fizz, Buzz, or Fizz buzz depending on the number entered
 Due Date	10/17
-Status	not done
+Status	Done
 Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw5/Fizzbuzz
-Self Grade	
-Notes	Just need to figure out how to do the test cases
+Self Grade	70/100
+I couldnt figure out how to fix the the test case. 
 
 ## Homework 6:
 
@@ -97,7 +97,7 @@ Due Date	3/31/23
 Status	not done
 Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw6/Fallingapart
 Self Grade	
-Notes	I need to understand the kattis problem first
+Notes	I need to understand the kattis problem first so I couldn't  get screenshots either. 
 
 # Labs
 
@@ -149,8 +149,8 @@ Notes	All the fix me's are fixed
 
 Name	twostones
 Description Lab based on conditionals
-Due Date	
-Status	3/10/23
+Due Date	3/10/23
+Status	Done
 Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab4/twostones
 Self Grade	100/100
 Notes	All the fix me's are completed
