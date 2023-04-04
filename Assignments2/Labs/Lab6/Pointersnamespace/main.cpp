@@ -1,4 +1,4 @@
-/  Pointers, enum type and namespace lab
+//  Pointers, enum type and namespace lab
 //  Updated by: Carson White
 //  Date: 3/27/23
 //  Program demonstrates the use of preprocessor directive, namespace, enum type,
@@ -44,20 +44,20 @@ void unittest();
 int main(int argc, char* argv[]) {
     // FIXME1 - Call unittest function if "test" argument is passed to main//fixed
     // exit the program after calling unittest
-    if (argc > 1 && std::strcmp(argv[1], "test") == 0) {
+    
     unittest();
-    return 0;
-  }
-    char userinpunt = 'b';
+   
+  
+    char userinput = 'b';
     bool keeprunning = true;
         while(keeprunning){
     big_int *num1; //a pointer variable to point to big_int data
     num1 = new big_int; //allocate memory in heap and store the address in num1
     big_int *num2 = new big_int; //declare num2 as a dynamic variable
-    large_int *sum = new large_int; //declare sum as a dynamic variable
+    big_int *sum = new big_int; //declare sum as a dynamic variable
     large_int *prod = new large_int;
     large_int *diff = new large_int;
-    large_int *larg = new large_int;
+    big_int *larg = new big_int;
     // FIXME2 - declare dynamic variables to store difference and larger values//fixed
     // Must use these variables to store the returned values from functions
 
@@ -67,8 +67,8 @@ int main(int argc, char* argv[]) {
     //FIXME4: call clear function defined above to clear the screen//fixed
    
     showMenu();
-    cin >> input;
-    oper = getOperation(input);
+    cin >> userinput;
+    oper = getOperation(userinput);
     switch (oper) {
         case ADD:
             cout << "Enter two whole numbers separated by space: ";
@@ -83,13 +83,12 @@ int main(int argc, char* argv[]) {
             cout << "Enter two whole numbers separated by space: ";
             cin >> *num1 >> *num2;
             *diff = MyFunctions::findDifference(num1, num2);
-            printf("%lld - %lld = %lld\n", *num1, *num2, *diff);
+            printf("%lld - %lld = %lld\n", *num1, *num2);
             break;
         case LARGER://fix this test case
             cout << "Enter two whole numbers separated by space: ";
             cin >> *num1 >> *num2;
             *larg = MyFunctions::findLarger(num1, num2);
-            *larg =  (n1 >= n2) ? n1 : n2;
             cout << *larg;
             break;
 
@@ -112,8 +111,8 @@ int main(int argc, char* argv[]) {
     delete diff;
     delete larg;
     cout << "If you want to keep playing enter y, if you want to quit enter n ";
-        cin >> userinpunt;
-    if(userinpunt == 'n')
+        cin >> userinput;
+    if(userinput == 'n')
     keeprunning = false;
      clear();
 }
@@ -152,4 +151,75 @@ OPERATION getOperation(char choice) {
             op = QUIT;
     }
     return op;
+}
+
+// must use MyFunctions namespace to resolve findSum function
+big_int MyFunctions::findSum(const big_int *n1, const big_int *n2) {
+    // dereference pointers n1 and n2 before adding their values
+    return (*n1) + (*n2);
+}
+
+big_int MyFunctions::findLarger(const big_int *n1, const big_int *n2)
+    if (n1 > n2) {
+    return n1;
+  } else {
+    return n2;
+  }
+
+// FIXME7: define findLarger function declared inside MyFunctions namespace
+// function returns the larger of the two given numbers//fixed
+
+// find Product function definition
+large_int MyFunctions::findProduct(const large_int &n1, const large_int &n2) {
+    return n1 * n2;
+}
+
+large_int MyFunctions::findDifference(const large_int &n1, const large_int &n2) {
+    return (n1) - (n2);
+}
+// FIXME8: define findDifference function declared inside MyFunctions namespace
+// return the value of second big_int subtracted from the first//fixed
+
+// function to unittest other functions
+void unittest() {
+    big_int *n1, *n2, *ans;
+    n1 = new big_int;
+    *n1 = 100000000;
+    n2 = new big_int;
+    *n2 = 999999999;
+    ans = new big_int;
+    *ans = MyFunctions::findSum(n1, n2);
+    assert(*ans == 1099999999);
+    
+    ans = new big_int;
+    *ans = MyFunctions::findLarger(n1, n2);
+    assert(*ans == 100000000);
+
+    large_int &n1, &n2, *ans;
+    n1 = new large_int;
+    *n1 = 20;
+    n2 = new large_int;
+    *n2 = 10;
+    ans = new large_int
+    *ans = MyFunctions::findProduct(n1, n2);
+    assert(*ans == 200);
+
+    ans = new large_int;
+    *ans = MyFunctions::findDifference(n1, n2);
+    assert(*ans == 10);
+
+
+
+
+
+
+    cerr << "Yay... All test cases passed!\n";
+    // FIXME9: Test findProduct, findDifference and findLarger functions with atleast 1 test case//fixed
+    delete n1;
+    delete n2;
+    delete prod;
+    delete diff;
+    delete sum;
+    delete larg;
+    // FIXME10: Delete all the dynamic variables//fixed
 }
