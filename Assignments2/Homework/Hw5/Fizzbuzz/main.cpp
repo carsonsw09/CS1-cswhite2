@@ -3,7 +3,7 @@
 //2)The second step is to define the unit test with 4 different test cases
 
 
-//not finished rewrite this program with a function and test cases
+//program needs a fix on the test cases
 
 
 #include <iostream>
@@ -28,14 +28,14 @@ int printFizzBuzz(int X, int Y, int N) {
     
     assert(printFizzBuzz(2, 3, 7) == "1 Fizz Buzz Fizz 5 FizzBuzz 7");
 
-assert(printFizzBuzz(2, 4, 7) == "1 Fizz 3 FizzBuzz 5 Fizz 7");
+    assert(printFizzBuzz(2, 4, 7) == "1 Fizz 3 FizzBuzz 5 Fizz 7");
 
-assert(printFizzBuzz(3, 5, 7) == "1 2 Fizz 4 Buzz Fizz 7");
+    assert(printFizzBuzz(3, 5, 7) == "1 2 Fizz 4 Buzz Fizz 7");
 
-assert(printFizzBuzz(4, 5, 10) == "1 2 3 Fizz Buzz 6 7 Fizz 9 10");
+    assert(printFizzBuzz(4, 5, 10) == "1 2 3 Fizz Buzz 6 7 Fizz 9 10");
 
 
-    
+    cout << "All test cases passed!" << endl;
 
     
 }

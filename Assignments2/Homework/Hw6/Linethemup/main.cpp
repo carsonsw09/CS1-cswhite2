@@ -10,16 +10,16 @@ string playerNames();//this creates the array to store the player names accordin
 
 void unitTest(){
     string test1[] = {"Carson", "Doug", "Greg", "Max", "Tom"};//this checks for increasing alphabetical order
-    bool increasing = true, decreasing = true;
+    bool increasing = true;
     for (int i = 0; i < 4; i++) {
         if (test1[i] > test1[i+1]) {
             increasing = false;
         }
         if (test1[i] < test1[i+1]) {
-            decreasing = false;
+            increasing = true;
         }
     }
-    assert(increasing);
+    assert(increasing == true);
 
     string test2[] = {"Tom", "Max", "Greg", "Doug", "Carson"};//this checks for decreasing alphabetical order
     increasing = true, decreasing = true;

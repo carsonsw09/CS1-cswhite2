@@ -60,7 +60,7 @@ assert(sqrtofnumbers(16) == 4.000000);
 assert(largernumbers(20, 10) == 20);
 assert(largernumbers(50, 5) == 50);
 
-
+cout << "All test cases passed." << endl;
 }
 
 
