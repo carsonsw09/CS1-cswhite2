@@ -99,13 +99,15 @@ Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homew
 Self Grade	90/100
 Notes	The program runs really well and meets the requirements. The unit test could be a bit better.
 
-Name
-Description
-Due date
-Status
-Location
-Self Grade
-Notes
+## Homework 7:
+
+Name Apaxia
+Description Using strings convert any word with consecutive letters to a simplified version without those consecutive letters
+Due date 4/7/23
+Status Done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw7/Apaxia
+Self Grade 100/100
+Notes All the requirements are met and the screenshots are all in there. 
 
 Name
 Description
