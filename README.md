@@ -94,10 +94,42 @@ Notes	This program meets all the requirements and has the screenshots.
 Name	Falling Apart
 Description This program takes an integer breaks it apart and then divides the pieces between two people
 Due Date	3/31/23
-Status	not done
+Status	Done
 Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw6/Fallingapart
-Self Grade	
-Notes	I need to understand the kattis problem first so I couldn't  get screenshots either. 
+Self Grade	90/100
+Notes	The program runs really well and meets the requirements. The unit test could be a bit better.
+
+Name
+Description
+Due date
+Status
+Location
+Self Grade
+Notes
+
+Name
+Description
+Due date
+Status
+Location
+Self Grade
+Notes
+
+Name
+Description
+Due date
+Status
+Location
+Self Grade
+Notes
+
+Name
+Description
+Due date
+Status
+Location
+Self Grade
+Notes
 
 # Labs
 
@@ -190,3 +222,45 @@ Status	Done
 Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab6/timeloop
 Self Grade	95/100
 Notes	Function may not be the best for this lab
+
+## Lab7:
+
+Name Simon Says
+Description Lab based on strings
+Due date 4/7/23
+Status Done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab7/Simonsays
+Self Grade 100/100
+Notes All the fix me's are done and the kattis screenshot is there.
+
+Name Hissing microphone
+Description Lab based on strings
+Due date 4/7/23
+Status Done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab7/Hissingmicrophhone
+Self Grade 100/100
+Notes All the fix me's are done and the kattis screenshot is there.
+
+Name
+Description
+Due date
+Status
+Location
+Self Grade
+Notes
+Name
+Description
+Due date
+Status
+Location
+Self Grade
+Notes
+
+Name
+Description
+Due date
+Status
+Location
+Self Grade
+Notes
+
