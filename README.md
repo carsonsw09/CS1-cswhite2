@@ -109,11 +109,11 @@ Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homew
 Self Grade 100/100
 Notes All the requirements are met and the screenshots are all in there. 
 
-Name
-Description
-Due date
-Status
-Location
+Name Avion
+Description Using strins decode 5 lines of strings to find key phrase FBI
+Due date 4/7/23
+Status not done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw7/Avian
 Self Grade
 Notes
 
