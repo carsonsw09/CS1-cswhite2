@@ -243,25 +243,38 @@ Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/
 Self Grade 100/100
 Notes All the fix me's are done and the kattis screenshot is there.
 
-Name
-Description
-Due date
-Status
-Location
-Self Grade
-Notes
-Name
-Description
-Due date
-Status
+## Lab8:
+
+Name Modulo 
+Description Lab based on Arrays
+Due date 4/15/23
+Status not done
 Location
 Self Grade
 Notes
 
-Name
-Description
-Due date
-Status
+Name Numbers
+Description Lab based on Arrays
+Due date 4/15/23
+Status not done
+Location
+Self Grade
+Notes
+
+## Lab9:
+
+Name Fox says
+Description Lab based on vectors
+Due date 4/15/23
+Status not done
+Location
+Self Grade
+Notes
+
+Name Numsystem
+Description Lab based on vectors
+Due date 4/15/23
+Status not done
 Location
 Self Grade
 Notes
