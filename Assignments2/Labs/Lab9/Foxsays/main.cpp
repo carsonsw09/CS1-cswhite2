@@ -74,7 +74,7 @@ void solve() {
       eraseAnimalSound(recordings, sound);
     }
     // FIXME2: call foxSays function and print the returned answer//fixed
-    return foxSays(vector<string>,  &recordings);
+    cout <<  foxSays(recordings) << endl;
   }
 }
 
@@ -106,7 +106,14 @@ void eraseAnimalSound(vector<string> &recordings, string sound) {
   // FIXME3 - use iterator to erase all matching sound//need to fix
   // if iterator points to sound, erase it and update it with the next element pointer
   // otherwise, just increment the iterator
-    c.erase(c.begin());
+    for (vector<string>::iterator it = recordings.begin(); it != recordings.end();)
+    {
+        if (*it == sound)
+            it = recordings.erase(it);
+        else
+            ++it;
+    }
+   
     
 
 }
@@ -137,13 +144,16 @@ void test_eraseAnimalSound() {
   eraseAnimalSound(recordings, "bo");
   vector<string> expected = {"boo", "meow", "ba", "wooon"};
   assert(recordings == expected);
+  recordings.clear();
   
-  vector<string> recordings = {"wow", "boo", "meow", "bo", "ba", "wow"};
+  
+ recordings = {"wow", "boo", "meow", "bo", "ba", "wow"};
   eraseAnimalSound(recordings, "wow");
-  vector<string> expected = {"boo", "meow", "bo", "ba"};
+ vector<string> expected2 = {"boo", "meow", "bo", "ba"};
   assert(recordings == expected2);
+  recordings.clear();
 
-  vector<string> recordings = {"cho", "oooh", "oooh", "oooh", "bah"};
+ recordings = {"cho", "oooh", "oooh", "oooh", "bah"};
   eraseAnimalSound(recordings, "oooh");
   vector<string> expected3 = {"cho", "bah"};
   assert(recordings == expected3);
@@ -160,16 +170,16 @@ void test_foxSays() {
   assert(ans == "boo meow ba wooon");
   ans.clear();
 
-  vector<string> recordings = {"wow", "boo", "meow", "bo", "ba", "wow"};
+   recordings = {"wow", "boo", "meow", "bo", "ba", "wow"};
   eraseAnimalSound(recordings, "wow");
-  string ans = foxSays(recordings);
+   ans = foxSays(recordings);
   cerr << "ans = " << ans << endl;
   assert(ans == "boo meow bo ba");
   ans.clear();
 
-  vector<string> recordings = {"cho", "oooh", "oooh", "oooh", "bah"};
+   recordings = {"cho", "oooh", "oooh", "oooh", "bah"};
   eraseAnimalSound(recordings, "oooh");
-  string ans = foxSays(recordings);
+   ans = foxSays(recordings);
   cerr << "ans = " << ans << endl;
   assert(ans == "cho bah");
   ans.clear();

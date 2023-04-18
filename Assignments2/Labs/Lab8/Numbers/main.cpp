@@ -61,8 +61,8 @@ void program() {
     printf("Sum = %lld\n",findSum(nums, size));
     cout << "Sorted list in ascending order:\n";
     bubbleSort(nums, size);
-    //FIXME3: print sorted array//maybe fixed
-    cout << bubbleSort[]<< endl;
+    //FIXME3: print sorted array// fixed
+    printArray(nums, size);
 
     delete [] nums;
 }
@@ -96,7 +96,7 @@ void findMaxAndMin(int nums[], int len, int &max, int &min)
         if(min > nums[i])
             min = nums[i];
 
-		//FIXEME4: compare min with each element and update min//maybe fixed
+		//FIXEME4: compare min with each element and update min// fixed
 	}
 }
 
@@ -126,8 +126,9 @@ big_int findSum(int nums[], int len)
 {
 	big_int sum = 0;
 	//FIXME6: iterate through nums array and add each element to sum//fixed
-    for (int i = 0; i < num_elements; i++) {
+    for (int i = 0; i < len; i++) {
         sum += nums[i];
-	return sum;
+	
 }
+return sum;
 }

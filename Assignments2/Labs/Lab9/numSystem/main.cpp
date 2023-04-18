@@ -113,7 +113,7 @@ string decToBin(llu num) {
         binary.pop_back();
     }
 
-    return to_string(num);
+    return ans;
 }
 
 llu binToDec(string binaryNumber)

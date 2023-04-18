@@ -44,8 +44,8 @@ int main(int argc, char* argv[])
     bool * flags = new bool[42];
     initFlags(flags, 42);
     updateFlags(nums, flags, 10);
-    //FIXME3 - call countFlags function passing proper argument and print the result//not fixed yet
-    int answer = countFlags(flags[42], flags_len);
+    //FIXME3 - call countFlags function passing proper argument and print the result//fixed
+    int answer = countFlags(flags, flags_len);
     cout << answer << endl;
 
   }
@@ -68,7 +68,7 @@ void updateFlags(const unsigned int * numbers, bool * flags, size_t num_len) {
 }
 
 unsigned int getModulo42(unsigned int num) {
-  // FIXME4: return num modulo 42//maybe fixed 
+  // FIXME4: return num modulo 42// fixed 
   return num % 42;
   
 }
