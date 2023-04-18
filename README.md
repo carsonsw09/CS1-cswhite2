@@ -9,20 +9,39 @@ GitHub Username	carsonsw09
 Repository	https://github.com/carsonsw09/CS1-cswhite2
 
 # Homework
+##Homework 1:
+
+Name Hangman
+Description This a Hangman game like program
+Due date 2/5/23
+Status 
+Location
+Self Grade
+Notes
+
+Name Echo
+Description This is the first kattis problem based of the Echo kattis problem
+Due date 2/5/23
+Status
+Location
+Self Grade
+Notes
+
 
 ## Homework 2
 Name	R2
 Description This finds the remaining number based off the sum and another side
 Due Date	2/24/23
 Status	Done
-Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Math/R|Self Grade	90/100
+Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw2/R2
+Self Grade	90/100
 Notes	Everuthing is in there from the program to the input and output files as while as screenshots of kattis and the program running. 
 
 Name	Triangle
 Description This finds the area and the perimeter of a triangle based off of 3 sides
 Due Date	2/24/23
 Status	Done
-Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Math/Triangle
+Location	https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw2/Triangle
 Self Grade	100/100
 Notes	This program runs perfectly well and a screenshot of the program is included running is included. 
 
@@ -249,7 +268,7 @@ Name Modulo
 Description Lab based on Arrays
 Due date 4/15/23
 Status not done
-Location
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab8/Modulo
 Self Grade
 Notes
 
@@ -257,7 +276,7 @@ Name Numbers
 Description Lab based on Arrays
 Due date 4/15/23
 Status not done
-Location
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab8/Numbers
 Self Grade
 Notes
 
@@ -267,7 +286,7 @@ Name Fox says
 Description Lab based on vectors
 Due date 4/15/23
 Status not done
-Location
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab9/Foxsays
 Self Grade
 Notes
 
@@ -275,7 +294,7 @@ Name Numsystem
 Description Lab based on vectors
 Due date 4/15/23
 Status not done
-Location
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab9/numSystem
 Self Grade
 Notes
 
