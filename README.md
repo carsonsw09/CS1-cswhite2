@@ -267,34 +267,34 @@ Notes All the fix me's are done and the kattis screenshot is there.
 Name Modulo 
 Description Lab based on Arrays
 Due date 4/15/23
-Status not done
+Status done
 Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab8/Modulo
-Self Grade
-Notes
+Self Grade 100/100
+Notes All the fix me's are done and the screenshots are in there.
 
 Name Numbers
 Description Lab based on Arrays
 Due date 4/15/23
-Status not done
+Status  done
 Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab8/Numbers
-Self Grade
-Notes
+Self Grade 100/100
+Notes All the fix me's are done and the screenshot is in there. 
 
 ## Lab9:
 
 Name Fox says
 Description Lab based on vectors
 Due date 4/15/23
-Status not done
+Status Done
 Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab9/Foxsays
-Self Grade
-Notes
+Self Grade 100/100
+Notes All the fix me's are done and all the screenshots are in there. 
 
 Name Numsystem
 Description Lab based on vectors
 Due date 4/15/23
-Status not done
+Status done
 Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab9/numSystem
-Self Grade
-Notes
+Self Grade 100/100
+Notes All the fix me's are done and all the screenshots are in there. 
 
