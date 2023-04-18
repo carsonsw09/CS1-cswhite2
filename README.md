@@ -9,7 +9,7 @@ GitHub Username	carsonsw09
 Repository	https://github.com/carsonsw09/CS1-cswhite2
 
 # Homework
-##Homework 1:
+## Homework 1:
 
 Name Hangman
 Description This a Hangman game like program
