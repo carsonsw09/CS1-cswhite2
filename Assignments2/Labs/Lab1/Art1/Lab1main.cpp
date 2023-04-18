@@ -2,8 +2,8 @@
     StdIO Lab
     ASCII Art - using literals and variables
     
-    Updated By: <Carson White> #FIXME1
-    Date: 2/9/23 #FIXME2
+    Updated By: <Carson White> #FIXME1//fixed
+    Date: 2/9/23 #FIXME2//fixed
     
     This program produces an ASCII art on the console.
     Algorithm steps: 
@@ -34,7 +34,6 @@ int main()
     //FIXED: greet the name using the variable as the following output
     //must output: Nice meeting you, <name>!
 
-    cout<< "Nice meeting you, ";
 
     cout << "Hope you like my Tom & Jerry ASCII art...\n\n";
 
@@ -61,7 +60,7 @@ int main()
     //Note: You can add more lines or print more ASCII arts of your choice if you'd like...
 
     cout << "\nGood bye... hit enter to exit the program: " << '\n';
-    //FIXME10: make the console wait for user input
+    //FIXME10: make the console wait for user input//fixed
 
     return 0; //exit program by returning 0 status to the system
 }
