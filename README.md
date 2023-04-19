@@ -154,6 +154,22 @@ Notes
 
 # Labs
 
+## Lab1:
+
+Name Art 1
+Description Lab based on using a string variable to make art
+Due date 2/5/23
+Status Done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab1/Art1
+Notes All the fix me's are completed and the screenshot is in there. 
+
+Name Art 2
+Description Lab based on using a string variable to make art
+Due Date 2/5/23
+Status Done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab1/Art2
+Notes All the fix me's are completed and the screenshot is in there. 
+
 ## Lab2:
 
 Name	Last Problem
