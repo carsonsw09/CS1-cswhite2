@@ -61,6 +61,7 @@ int main()
 
     cout << "\nGood bye... hit enter to exit the program: " << '\n';
     //FIXME10: make the console wait for user input//fixed
+    cin.ignore();
 
     return 0; //exit program by returning 0 status to the system
 }

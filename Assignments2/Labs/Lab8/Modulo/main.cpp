@@ -29,6 +29,7 @@ void testCountFlags();
 
 int main(int argc, char* argv[])
 {
+  size_t flags_len;
   if (argc == 2 and string(argv[1]) == string("test")) {
     // FIXME1: call testGetModulo42()//fixed
     testGetModulo42();
@@ -45,7 +46,7 @@ int main(int argc, char* argv[])
     initFlags(flags, 42);
     updateFlags(nums, flags, 10);
     //FIXME3 - call countFlags function passing proper argument and print the result//fixed
-    int answer = countFlags(flags, flags_len);
+    size_t answer = countFlags(flags, flags_len);
     cout << answer << endl;
 
   }
@@ -113,7 +114,22 @@ void testCountFlags() {
   flags[420%42] = true;
   flags[43%42] = true;
   assert(countFlags(flags, 42) == 2);
-  // FIXME7: write 3 more test cases//still need to fix this
+  // FIXME7: write 3 more test cases//fixed
+  initFlags(flags, 42);
+  flags[getModulo42(44)] = true;
+  flags[getModulo42(45)] = true;
+  assert(countFlags(flags, 42) == 2);
+
+  initFlags(flags, 42);
+  flags[getModulo42(42)] = true;
+  flags[getModulo42(84)] =true;
+  assert(countFlags(flags, 42) == 1);
+
+  initFlags(flags, 42);
+  flags[getModulo42(1)] = true;
+  flags[getModulo42(2)] = true;
+  flags[getModulo42(3)] = true;
+  assert(countFlags(flags, 42) == 3);
 
   
   cerr << "countFlags(): All test cases passed!" << endl;
