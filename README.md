@@ -14,18 +14,18 @@ Repository	https://github.com/carsonsw09/CS1-cswhite2
 Name Hangman
 Description This a Hangman game like program
 Due date 2/5/23
-Status 
-Location
-Self Grade
-Notes
+Status Done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw1/Hangman
+Self Grade 100/100
+Notes The program runs well and meets all the requirements. 
 
 Name Echo
 Description This is the first kattis problem based of the Echo kattis problem
 Due date 2/5/23
-Status
-Location
-Self Grade
-Notes
+Status Done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw1/Echo
+Self Grade 100/100
+Notes The program runs well and all the screenshots are in there. 
 
 
 ## Homework 2
