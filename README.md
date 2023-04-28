@@ -314,3 +314,13 @@ Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/
 Self Grade 100/100
 Notes All the fix me's are done and all the screenshots are in there. 
 
+## Lab10:
+
+|Name| Fileio
+|Descrpition| Lab based on input and output files
+|Due Date| 4/28/23
+|Status| not done
+|Location| 
+|Self Grade|
+|Notes| 
+
