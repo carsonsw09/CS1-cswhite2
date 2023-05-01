@@ -136,18 +136,29 @@ Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homew
 Self Grade 100/100
 Notes All the requirements are met and all the screenshots are in there.
 
-Name
-Description
-Due date
-Status
-Location
+## Hw8
+
+Name Gradebook
+Description Hw based on input and output files with vecors
+Due date 5/2/23
+Status not done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw8/Gradebook
 Self Grade
 Notes
 
-Name
-Description
-Due date
-Status
+## Hw9
+
+Name A new alpabet
+Description A lab based on STL map
+Due date 5/2/23
+Status not done
+Location
+Self Grade
+
+Name Babbleish
+Description A lab based on STL map
+Due date 5/2/23
+Status not done
 Location
 Self Grade
 Notes
@@ -320,7 +331,7 @@ Name Fileio
 Descrpition Lab based on input and output files
 Due Date 4/28/23
 Status not done
-Location 
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab10
 Self Grade
 Notes 
 
