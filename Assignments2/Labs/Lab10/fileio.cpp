@@ -51,10 +51,10 @@ int main(int argc, char* argv[]) {
 
 void readData(vector<int> & numbers, const string inputFileName) {
     // FIXME1: Open inputFileName for reading data//maybe fixed
-    // read the data until eof marker and store each num into numbers vector
+    // read the data until eof marker and store each num into numbers vector//fixed
     int num;
     ifstream fin(inputFileName);
-    while(inputFile >> num) {
+    while(inputFileName >> num) {
         numbers.push_back(num);
     }
 
@@ -68,17 +68,10 @@ void writeData(const vector<int> & numbers) {
     2. Store and use the file name to open the file in write mode
     3. Write output as shown in output.txt file with proper formatting using iomanip
     */
-    
+    ofstream outputFile(outputFileName);
 
     cout << "Enter output file name: ";
     cin >> outputFileName;
-
-    ofstream outputFile(outputFileName);
-
-    if(!outputFile.is_open()) {
-        cout << "Error: Unable to open output file." << endl;
-        return 1;
-    }
 
     //This Write output to the file
     int num1 = 100;
@@ -88,6 +81,16 @@ void writeData(const vector<int> & numbers) {
     int num5 = -99;
     int num6 = 10;
     int num7 = 99;
+
+    outputFile << fixed << setprecision(2);
+    outputFile << setw(10) << left << num1
+               << setw(10) << left << num2
+               << setw(10) << right << num3
+               << setw(10) << left << num4
+               << setw(10) << left << num5
+               << setw(10) << right << num6
+               << setw(10) << left << num7
+               << endl;
 
     //fix the out put shown right here
     outputFile.close();
@@ -135,8 +138,8 @@ float findMean(const vector<int> & nums) {
 int findRange(const vector<int> & nums) {
     // FIXME6 - implement function that finds and returns the range value//fixed
     // range = max - min
-    int min = min_element(nums.begin(), nums.end());
-    int max = max_element(nums.begin(), nums.end());
+    int min;
+    int max;
 
     return max - min;
 
@@ -166,7 +169,7 @@ void test() {
     assert(findMedian(numbers1) == 5);
     vector<int> numbers2 = {10, 10, 10, 10, 20, 20};
     assert(fabs(findMean(numbers2) -13.33333) <= EPSILON  );
-    assert(findMax(number2) == 20);
+    assert(findMax(numbers2) == 20);
     assert(findMedian(numbers2) == 10);
     vector<int> numbers3 = {10, 20, 30, 0, 30, 10};
     assert(fabs(findMean(numbers3) -16.6667) <= EPSILON  );

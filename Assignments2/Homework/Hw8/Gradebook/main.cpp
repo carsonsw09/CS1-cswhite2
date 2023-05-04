@@ -11,8 +11,30 @@
 
 using namespace std;
 
+struct StudentRecord {
+
+    string fname;
+    string lname;
+
+    int test1;
+    int test2;
+    int test3;
+    int test4;
+};
+
 double calculateAveragegrade(const StudentRecord& student) {//this is the funciton to find the average grade the students got
     return (student.test1 + student.test2 + student.test3 + student.test4) / 4.0;
+}
+void Getline( ofstream &outputFile){
+    for(int i=0; i<30;i++){
+        outputFile << "=";
+
+
+
+    }
+    outputFile << endl;
+
+
 }
 
 char calculateLetterGrade(double score) {//this calculates their final letter grade using if else statements
@@ -29,16 +51,7 @@ char calculateLetterGrade(double score) {//this calculates their final letter gr
     }
 }
 
-struct StudentRecord {
 
-    string fname;
-    string lname;
-
-    int test1;
-    int test2;
-    int test3;
-    int test4;
-};
 
 int main() {
     string inputFileName, outputFileName;
@@ -62,16 +75,16 @@ int main() {
 
     ofstream outputFile(outputFileName);
 
-
-
-    outputFile << "First name"
-                << "Last name"
-               << "Test 1"
-               << "Test 2"
-               << "Test 3"
-               << "Test 4"
-               << "Average"
-               << "Grade"
+    Getline(outputFile);
+    outputFile 
+                << "First name " << setw(5)
+                << "Last name " << setw(5)
+               << "Test 1  "
+               << "Test 2  "
+               << "Test 3  "
+               << "Test 4  "
+               << "Average  "
+               << "Grade  "
                << endl;
 
     for(const auto& student : students) {

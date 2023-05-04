@@ -1,14 +1,13 @@
 
-
 CXX = g++
 
 CXXFLAGS = -c -g -Wall -std=c++17
 
 
-PROGRAM = Lab10.exe
+PROGRAM = Morsecode.exe
 
 
-CPPFILES = fileio.cpp
+CPPFILES = main.cpp
 
 
 all:
