@@ -335,3 +335,13 @@ Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/
 Self Grade
 Notes 
 
+## Lab11:
+
+Name Morse Code Palindrome
+Description Lab based on maps
+Due date 5/8/23
+Status done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Labs/Lab11/Morsecode
+Self Grade 95/100
+Notes All the fix me's are completed and the screenshot is in there I just couldn't get it to work on Kattis. 
+
