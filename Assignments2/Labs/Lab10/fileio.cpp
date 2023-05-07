@@ -32,6 +32,17 @@ int findMode(const vector<int> &);
 
 void writeData(const vector<int> & numbers);
 void test();
+void Getline( ofstream &outputFile){
+    for(int i=0; i<90;i++){
+        outputFile << "=";
+
+
+
+    }
+    outputFile << endl;
+
+
+}
 
 int main(int argc, char* argv[]) {
     if (argc == 2 && string(argv[1]) == "test") {
@@ -61,7 +72,7 @@ void readData(vector<int> & numbers, const string inputFileName) {
 }
 
 void writeData(const vector<int> & numbers) {
-    // FIXME2
+    // FIXME2//fixed
     /*
     Algorithm steps:
     1. Prompt user to enter output file name
@@ -83,14 +94,26 @@ void writeData(const vector<int> & numbers) {
     int num7 = 99;
 
     outputFile << fixed << setprecision(2);
-    outputFile << setw(10) << left << num1
-               << setw(10) << left << num2
-               << setw(10) << right << num3
-               << setw(10) << left << num4
-               << setw(10) << left << num5
-               << setw(10) << right << num6
-               << setw(10) << left << num7
-               << endl;
+    outputFile 
+            << "List of numbers: "
+            << setw(10) << left << num1
+            << setw(10) << left << num2
+            << setw(10) << right << num3
+            << setw(10) << left << num4
+            << setw(10) << left << num5
+            << setw(10) << right << num6
+            << setw(10) << left << num7
+            << endl;
+            <<" " << endl;
+    Getline(outputFile);
+    outputFile
+            <<setw(30) << "Statistical Results" << endl;
+    Getline(outputFile);
+    outputFile
+            <<"Max" << setw(15) << "Min" << setw(15) << "Mean"
+            <<setw(15) << "Median" << setw(15) << "Range" << endl;
+            << max << setw(15) << min << setw(15) << mean << setw(15)
+            << median << setw(15) << range << endl;
 
     //fix the out put shown right here
     outputFile.close();

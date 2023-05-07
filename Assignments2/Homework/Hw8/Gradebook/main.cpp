@@ -22,11 +22,11 @@ struct StudentRecord {
     int test4;
 };
 
-double calculateAveragegrade(const StudentRecord& student) {//this is the funciton to find the average grade the students got
+double calculateAveragegrade(const StudentRecord& student) {//this is the funciton to find the average grade the score got
     return (student.test1 + student.test2 + student.test3 + student.test4) / 4.0;
 }
 void Getline( ofstream &outputFile){
-    for(int i=0; i<30;i++){
+    for(int i=0; i<90;i++){
         outputFile << "=";
 
 
@@ -50,6 +50,18 @@ char calculateLetterGrade(double score) {//this calculates their final letter gr
         return 'F';
     }
 }
+void bubble_sort(vector<StudentRecord>& score) {
+    int n = score.size();
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (score[j] < score[j + 1]) {
+                swap(score[j], score[j + 1]);
+            }
+        }
+    }
+}
+
+
 
 
 
@@ -62,13 +74,14 @@ int main() {
     ifstream inputFile(inputFileName);
 
 
-    vector<StudentRecord> students;
+    vector<StudentRecord> score;
 
     while(!inputFile.eof()) {
         StudentRecord student;
         inputFile >> student.fname >> student.lname >> student.test1 >> student.test2 >> student.test3 >> student.test4;
-        students.push_back(student);
+        score.push_back(student);
     }
+    bubble_sort(score);
 
     cout << "Enter output file name: ";
     cin >> outputFileName;
@@ -77,30 +90,33 @@ int main() {
 
     Getline(outputFile);
     outputFile 
-                << "First name " << setw(5)
-                << "Last name " << setw(5)
-               << "Test 1  "
-               << "Test 2  "
-               << "Test 3  "
-               << "Test 4  "
-               << "Average  "
-               << "Grade  "
-               << endl;
+            << "Fname " << setw(20)
+            << "Lname " << setw(20)
+            << "Test 1  " << setw(10)
+            << "Test 2  " << setw(10)
+            << "Test 3  " << setw(10)
+            << "Test 4  " << setw(10)
+            << "Average  " << setw(10)
+            << "Grade  " 
+            << endl;
+    Getline(outputFile);
 
-    for(const auto& student : students) {
+    for(const auto& student : score) {
         double avgGrade = calculateAveragegrade(student);
         char letterGrade = calculateLetterGrade(avgGrade);
 
-        outputFile << student.fname
-                    << student.lname
-                   << student.test1
-                   << student.test2
-                   << student.test3
-                   << student.test4
-                   << avgGrade
-                   << letterGrade
-                   << endl;
+     outputFile 
+            << student.fname << setw(20)
+            << student.lname << setw(20)
+            << student.test1 << setw(10)
+            << student.test2 << setw(10)
+            << student.test3 << setw(10)
+            << student.test4 << setw(10)
+            << avgGrade << setw(10)
+            << letterGrade << setw(10)
+            << endl;
     }
+    Getline(outputFile);
 
 
     return 0;

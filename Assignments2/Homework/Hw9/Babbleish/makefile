@@ -4,10 +4,10 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 
-PROGRAM = .exe
+PROGRAM = Babbleish.exe
 
 
-CPPFILES = .cpp
+CPPFILES = main.cpp
 
 
 all:
