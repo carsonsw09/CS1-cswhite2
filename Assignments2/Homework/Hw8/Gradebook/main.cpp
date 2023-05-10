@@ -8,8 +8,12 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
+#include <iterator>
+#include <functional>
 
 using namespace std;
+
+
 
 struct StudentRecord {
 
@@ -20,9 +24,13 @@ struct StudentRecord {
     int test2;
     int test3;
     int test4;
+
+    double avg;
 };
 
-double calculateAveragegrade(const StudentRecord& student) {//this is the funciton to find the average grade the score got
+
+
+double calculateAveragegrade( StudentRecord& student) {//this is the funciton to find the average grade the score got
     return (student.test1 + student.test2 + student.test3 + student.test4) / 4.0;
 }
 void Getline( ofstream &outputFile){
@@ -36,6 +44,9 @@ void Getline( ofstream &outputFile){
 
 
 }
+bool student_compare_avg(StudentRecord a, StudentRecord b){
+    return (a.avg < b.avg);
+}
 
 char calculateLetterGrade(double score) {//this calculates their final letter grade using if else statements
     if(score >= 90.0) {
@@ -48,16 +59,6 @@ char calculateLetterGrade(double score) {//this calculates their final letter gr
         return 'D';
     } else {
         return 'F';
-    }
-}
-void bubble_sort(vector<StudentRecord>& score) {
-    int n = score.size();
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (score[j] < score[j + 1]) {
-                swap(score[j], score[j + 1]);
-            }
-        }
     }
 }
 
@@ -79,9 +80,12 @@ int main() {
     while(!inputFile.eof()) {
         StudentRecord student;
         inputFile >> student.fname >> student.lname >> student.test1 >> student.test2 >> student.test3 >> student.test4;
+        student.avg = calculateAveragegrade(student);
+        
         score.push_back(student);
     }
-    bubble_sort(score);
+
+    sort(score.begin(), score.end(), student_compare_avg);
 
     cout << "Enter output file name: ";
     cin >> outputFileName;
@@ -101,18 +105,18 @@ int main() {
             << endl;
     Getline(outputFile);
 
-    for(const auto& student : score) {
-        double avgGrade = calculateAveragegrade(student);
-        char letterGrade = calculateLetterGrade(avgGrade);
+    for( auto student : score) {
+        char letterGrade = calculateLetterGrade(student.avg);
 
+        
      outputFile 
-            << student.fname << setw(20)
+            << left << student.fname << setw(20)
             << student.lname << setw(20)
             << student.test1 << setw(10)
             << student.test2 << setw(10)
             << student.test3 << setw(10)
             << student.test4 << setw(10)
-            << avgGrade << setw(10)
+            << student.avg << setw(10)
             << letterGrade << setw(10)
             << endl;
     }

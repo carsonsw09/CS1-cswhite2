@@ -9,21 +9,13 @@ string solution(map<string, string> fish);
 
 int main(void)
 {
+
     string line;
     string key;
     string value;
     map<string, string> babel;
     
-    /*do
-    {
-        getline(cin, line);
-        if(line == "")
-            break;
-        
-        istringstream is(line);
-        is >> value >> key;
-        babel[key] = value;
-    }while(line != "");*/
+   
     while(true)
     {
         string key, value;
@@ -60,4 +52,13 @@ string solution(map<string, string> fish)
     }
 
     return answer;
+}
+
+void test(){
+    string line = ()
+
+
+
+
+
 }

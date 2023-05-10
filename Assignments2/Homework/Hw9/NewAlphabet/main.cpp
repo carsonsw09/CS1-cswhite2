@@ -36,11 +36,11 @@ map<char, string> alpha_map{//this is a map of the translation of the characters
             {'Z', "2"}
     };
 
-string convertoAlpha(const string&);
+string convertoAlpha(const string&);//here are the protoypes of the functions
 void testisAlpha();
 void solve();
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {//this runs the test function and the solve function
 	if (argc == 2 and string(argv[1]) == "test")
 		testisAlpha();
 	else
@@ -52,7 +52,7 @@ void solve(){
 
     cin >> phrase;
 
-    convertoAlpha(phrase);
+   cout << convertoAlpha(phrase) << endl;
 
 
 
@@ -62,16 +62,20 @@ void solve(){
 string convertoAlpha(const string& phrase){
     string alpha = "";
 
-    for (char c : phrase) {
-		c = char(toupper(c));
 
-        alpha += c;
-    }
-    cout << alpha << endl;
-
-
+        for (const char& c : phrase) {
+        auto it = alpha_map.find(c);
+        if (it != alpha_map.end()) {
+            alpha += it->second;
+        }
+        else {
+            alpha += c;
+        }
+        }
+    return alpha;
 
 }
+
 void testisAlpha(){
     string phrase = ("BA");
     assert(convertoAlpha(phrase) == "8@");
