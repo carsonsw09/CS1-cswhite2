@@ -141,27 +141,27 @@ Notes All the requirements are met and all the screenshots are in there.
 Name Gradebook
 Description Hw based on input and output files with vecors
 Due date 5/2/23
-Status not done
+Status Done
 Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw8/Gradebook
-Self Grade
-Notes
+Self Grade 100/100
+Notes Everything runs well and I have a screenshot in there. 
 
 ## Hw9
 
 Name A new alpabet
 Description A lab based on STL map
 Due date 5/2/23
-Status not done
+Status Done
 Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw9/NewAlphabet
-Self Grade
+Self Grade 100/100 The code runs perfectly and the screenshots are in all in there. 
 
 Name Babbleish
 Description A lab based on STL map
 Due date 5/2/23
-Status not done
+Status Done
 Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/Homework/Hw9/Babbleish
-Self Grade
-Notes
+Self Grade 90/100
+Notes I don't know if were allowed to use the one you did in class but if not I'll do a new one. 
 
 # Labs
 
