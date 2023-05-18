@@ -65,7 +65,7 @@ void readData(vector<int> & numbers, const string inputFileName) {
     // read the data until eof marker and store each num into numbers vector//fixed
     int num;
     ifstream fin(inputFileName);
-    while(inputFileName >> num) {
+    while(fin >> num) {
         numbers.push_back(num);
     }
 
@@ -79,10 +79,12 @@ void writeData(const vector<int> & numbers) {
     2. Store and use the file name to open the file in write mode
     3. Write output as shown in output.txt file with proper formatting using iomanip
     */
-    ofstream outputFile(outputFileName);
+    string filename;
+    
 
     cout << "Enter output file name: ";
-    cin >> outputFileName;
+    cin >> filename;
+    ofstream outputFile(filename);
 
     //This Write output to the file
     int num1 = 100;
@@ -96,30 +98,35 @@ void writeData(const vector<int> & numbers) {
     outputFile << fixed << setprecision(2);
     outputFile 
             << "List of numbers: "
-            << setw(10) << left << num1
-            << setw(10) << left << num2
-            << setw(10) << right << num3
-            << setw(10) << left << num4
-            << setw(10) << left << num5
-            << setw(10) << right << num6
-            << setw(10) << left << num7
+            << setw(5)  << num1
+            << setw(5)  << num2
+            << setw(5)  << num3
+            << setw(5)  << num4
+            << setw(5)  << num5
+            << setw(5)  << num6
+            << setw(5)  << num7
+            << endl
             << endl;
-            <<" " << endl;
     Getline(outputFile);
     outputFile
             <<setw(30) << "Statistical Results" << endl;
     Getline(outputFile);
+    int max = findMax(numbers);
+    int min = findMin(numbers);
+    int range = findRange(numbers);
+    float mean = findMean(numbers);
+    float median = findMedian(numbers);
+
     outputFile
             <<"Max" << setw(15) << "Min" << setw(15) << "Mean"
-            <<setw(15) << "Median" << setw(15) << "Range" << endl;
+            << setw(15) << "Median" << setw(15) << "Range" << endl
             << max << setw(15) << min << setw(15) << mean << setw(15)
             << median << setw(15) << range << endl;
 
     //fix the out put shown right here
     outputFile.close();
 
-    cout << "Output written to " << outputFileName << "." << endl;
-
+    
 
 
 
@@ -144,7 +151,7 @@ int findMin(const vector<int> & nums) {
     int min = nums[0];
 
     for(int n: nums)
-        min = (n<min) ? n : max;
+        min = (n<min) ? n : min;
 
     return min;
 
