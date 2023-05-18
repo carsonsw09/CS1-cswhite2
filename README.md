@@ -8,6 +8,16 @@ Mav Username	cswhite2
 GitHub Username	carsonsw09
 Repository	https://github.com/carsonsw09/CS1-cswhite2
 
+# Final Project
+
+Name Hangman game
+Description This is a hangman game using everything we've learned over the semester
+Due date 5/18/23
+Status Done
+Location https://github.com/carsonsw09/CS1-cswhite2/tree/main/Assignments2/FinalProject
+Self Grade 90/100
+Notes I couldn't figure out the header format and the program runs but there are a few tweaks in there.
+
 # Homework
 ## Homework 1:
 
